@@ -1,3 +1,6 @@
-<h2 id="title">Welcome to Ember</h2>
-
-{{outlet}}
+<ul>
+{{#each pagedContent as |content|}}
+<li>{{content}}</li>
+{{/each}}
+</ul>
+<button {{action 'prev'}}>&lt;</button>{{input value=page}}<button {{action 'next'}}>&gt;</button>
