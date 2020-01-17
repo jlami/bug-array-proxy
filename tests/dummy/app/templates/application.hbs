@@ -1,6 +1,17 @@
+2 computed:
 <ul>
 {{#each pagedContent as |content|}}
 <li>{{content}}</li>
 {{/each}}
 </ul>
-<button {{action 'prev'}}>&lt;</button>{{input value=page}}<button {{action 'next'}}>&gt;</button>
+
+ClassComputed:
+<ul>
+{{#each pagedContent2 as |content|}}
+<li>{{content}}</li>
+{{/each}}
+</ul>
+
+
+<button {{action 'prev'}}>&lt;</button>{{input value=page}}<button {{action 'next'}}>&gt;</button><br>
+Total pages: {{pagedContent.totalPages}}
